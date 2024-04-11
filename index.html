@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <link rel="stylesheet" href="css/config.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <h1 id="titulo">Lista de Tareas</h1> <!-- Título de la página -->
+    <div id="categorias"> <!-- Botones para filtrar tareas por categoría -->
+        <button onclick="filtrarTareas('Todas')">Todas</button>
+        <button onclick="filtrarTareas('Eventos')">Eventos</button>
+        <button onclick="filtrarTareas('Cumpleaños')">Cumpleaños</button>
+        <button onclick="filtrarTareas('Escuela')">Escuela</button>
+        <button onclick="filtrarTareas('Trabajo')">Trabajo</button>
+    </div>
+
+    <div id="mensaje-sin-tareas" style="display: none;"> <!-- Mensaje e imagen que se muestran cuando no hay tareas -->
+        <img id="imagen2" src="js/nw.gif" width="300" height="300" style="align-items: center;">
+        <p>Aun sin tareas, Vuelve Pronto</p>
+    </div>
+
+    <div id="entrada-tarea"> <!-- Entrada para agregar nuevas tareas -->
+        <input type="text" id="nueva-tarea" placeholder="Agregar nueva tarea...">
+        <select id="categoria-tarea"> <!-- Selector para elegir la categoría de la nueva tarea -->
+            <option value="Eventos">Eventos</option>
+            <option value="Cumpleaños">Cumpleaños</option>
+            <option value="Escuela">Escuela</option>
+            <option value="Trabajo">Trabajo</option>
+        </select>
+        <button id="agregar-btn">Agregar</button> <!-- Botón para agregar la nueva tarea -->
+    </div>
+    <div id="lista-tareas-container"> <!-- Contenedor de la lista de tareas -->
+        <ul id="lista-tareas">
+            <!-- Aquí se agregarán las tareas -->
+        </ul>
+    </div>
+    <!-- Agrega el audio y la imagen aquí -->
+    <audio id="audio" src="js/sonido.mp3"></audio>
+    <div id="mensaje" style="display: none;"></div>
+    <img id="imagen" src="js/w.gif" style="display: none;" width="400" height="400">
+    <script src="js/List.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
