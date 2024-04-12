@@ -21,16 +21,19 @@
         <p>Aun sin tareas, Vuelve Pronto</p>
     </div>
 
-    <div id="entrada-tarea"> <!-- Entrada para agregar nuevas tareas -->
+    <div id="entrada-tarea">
         <input type="text" id="nueva-tarea" placeholder="Agregar nueva tarea...">
-        <select id="categoria-tarea"> <!-- Selector para elegir la categoría de la nueva tarea -->
+        <select id="categoria-tarea">
             <option value="Eventos">Eventos</option>
             <option value="Cumpleaños">Cumpleaños</option>
             <option value="Escuela">Escuela</option>
             <option value="Trabajo">Trabajo</option>
         </select>
-        <button id="agregar-btn">Agregar</button> <!-- Botón para agregar la nueva tarea -->
+        <input type="date" id="fecha-inicio">
+        <input type="date" id="fecha-fin">
+        <button id="agregar-btn">Agregar</button>
     </div>
+    
     <div id="lista-tareas-container"> <!-- Contenedor de la lista de tareas -->
         <ul id="lista-tareas">
             <!-- Aquí se agregarán las tareas -->
